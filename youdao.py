@@ -74,7 +74,8 @@ def lookup():
                 fusionicb.reconstruct()
             gl.homeurl="file://" + gl.resultdir #合成最终缓冲访问地址
             window.load(gl.homeurl)                             #加载最终缓冲内容到浏览器
-            window.show()                                    #显示结果
+            #window.show()                                    #显示结果
+            window.present()            #查词时，窗口上升到顶部，（KDE下需将避免抢占焦点的程度改为无）
             gl.lock=0
 
 def webshow():
